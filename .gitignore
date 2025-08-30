@@ -1,0 +1,25 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+build/
+.cache/
+dist/
+.turbo/
+.vite/
+
+# Env & local
+.env*
+.DS_Store
+
+# Netlify
+.netlify/
+
+# Sanity
+sanity.cli.js
+sanity.json
+
+
