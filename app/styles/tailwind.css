@@ -9,6 +9,7 @@
   :root {
     --font-primary: "PP Nikkei Journal", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   }
+  html { scroll-behavior: smooth; }
 }
 
 /* Local font faces */
@@ -39,21 +40,21 @@
   @keyframes marquee { to { transform: translateX(-50%); } }
   .animate-marquee { animation: marquee var(--marquee-duration, 20s) linear infinite; }
   .text-h1 {
-    font-size: clamp(var(--h1-size-min, 3rem), calc(1rem + 6vw), var(--h1-size-max, 7.5rem));
+    font-size: clamp(var(--h1-size-min, 3rem), calc(1rem + 6vw), var(--h1-size-max, 12.5rem));
     line-height: var(--h1-leading, 1.1);
     letter-spacing: var(--h1-tracking, -0.02em);
     font-weight: var(--h1-weight, 800);
     font-family: var(--font-primary);
   }
   .text-pb {
-    font-size: clamp(var(--pb-size-min, 1.25rem), calc(0.5rem + 1.4vw), var(--pb-size-max, 3.125rem));
+    font-size: clamp(var(--pb-size-min, 1.25rem), calc(0.5rem + 1.4vw), var(--pb-size-max, 4.167rem));
     line-height: var(--pb-leading, 1.2);
     letter-spacing: var(--pb-tracking, 0);
     font-weight: var(--pb-weight, 800);
     font-family: var(--font-primary);
   }
   .text-h3 {
-    font-size: clamp(var(--h3-size-min, 1.25rem), calc(0.25rem + 1vw), var(--h3-size-max, 3.125rem));
+    font-size: clamp(var(--h3-size-min, 1.25rem), calc(0.25rem + 1vw), var(--h3-size-max, 4.167rem));
     line-height: var(--h3-leading, 1.1);
     letter-spacing: var(--h3-tracking, 0);
     font-weight: var(--h3-weight, 800);
@@ -67,14 +68,14 @@
     font-family: var(--font-primary);
   }
   .text-btn {
-    font-size: clamp(var(--btn-size-min, 1rem), calc(0.5rem + 0.6vw), var(--btn-size-max, 2.5rem));
+    font-size: clamp(var(--btn-size-min, 1rem), calc(0.5rem + 0.6vw), var(--btn-size-max, 4.167rem));
     line-height: var(--btn-leading, 1);
     letter-spacing: var(--btn-tracking, 0);
     font-weight: var(--btn-weight, 800);
     font-family: var(--font-primary);
   }
   .text-body {
-    font-size: clamp(var(--p-size-min, 1rem), calc(0.25rem + 0.6vw), var(--p-size-max, 2.5rem));
+    font-size: clamp(var(--p-size-min, 1rem), calc(0.25rem + 0.6vw), var(--p-size-max, 3.333rem));
     line-height: var(--p-leading, 1.5);
     letter-spacing: var(--p-tracking, 0);
     font-weight: var(--p-weight, 400);

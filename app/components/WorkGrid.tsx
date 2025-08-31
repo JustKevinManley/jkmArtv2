@@ -16,7 +16,6 @@ export function WorkGrid({ items = [] }: { items?: GridItem[] }) {
         {items.map((item) => (
           <article key={item._id} className="group relative overflow-hidden rounded-md bg-dark/5">
             {item.mainImage ? (
-              // eslint-disable-next-line jsx-a11y/alt-text
               <img
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 src={urlFor(item.mainImage).width(640).fit('max').auto('format').url() || ''}
@@ -24,6 +23,7 @@ export function WorkGrid({ items = [] }: { items?: GridItem[] }) {
                 sizes={sizesAttr()}
                 loading="lazy"
                 decoding="async"
+                alt={item.title || ''}
               />
             ) : null}
             <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -6,7 +6,12 @@ import seo from './objects/seo'
 import link from './objects/link'
 import media from './objects/media'
 import portableText from './objects/portableText'
-import { heroHeadline, marquee, workGrid, pullQuote, contactFormIntro } from './objects/blocks'
+import richTextBlock from './objects/richTextBlock'
+import heroHeadline from './blocks/heroHeadline'
+import marquee from './blocks/marquee'
+import workGrid from './blocks/workGrid'
+import pullQuote from './blocks/pullQuote'
+import contactIntro from './blocks/contactIntro'
 
 export const schemaTypes = [
   // documents
@@ -19,9 +24,10 @@ export const schemaTypes = [
   link,
   media,
   portableText,
+  richTextBlock,
   heroHeadline,
   marquee,
   workGrid,
   pullQuote,
-  contactFormIntro,
+  contactIntro,
 ]

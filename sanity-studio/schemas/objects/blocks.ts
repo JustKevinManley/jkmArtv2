@@ -7,6 +7,13 @@ export const heroHeadline = defineType({
   fields: [
     defineField({name: 'eyebrow', title: 'Eyebrow', type: 'string'}),
     defineField({name: 'headline', title: 'Headline', type: 'string', validation: (Rule) => Rule.required()}),
+    defineField({
+      name: 'accentWords',
+      title: 'Accent Words',
+      type: 'array',
+      of: [{type: 'string'}],
+      description: 'Words/phrases in the headline to render in editor red',
+    }),
     defineField({name: 'subcopy', title: 'Subcopy', type: 'text'}),
     defineField({name: 'cta', title: 'CTA', type: 'link'}),
     defineField({name: 'media', title: 'Media', type: 'media'}),
