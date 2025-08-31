@@ -21,54 +21,22 @@ export default defineType({
       },
       validation: (Rule) => Rule.required(),
     }),
+    defineField({ name: 'role', title: 'Role', type: 'array', of: [{type:'string'}]}),
+    defineField({ name: 'client', title: 'Client', type: 'string'}),
+    defineField({ name: 'year', title: 'Year', type: 'string'}),
+    defineField({ name: 'hero', title: 'Hero', type: 'media'}),
+    defineField({ name: 'introCopy', title: 'Intro Copy', type: 'portableText'}),
     defineField({
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'text',
-      rows: 4,
-    }),
-    defineField({
-      name: 'client',
-      title: 'Client',
-      type: 'string',
-    }),
-    defineField({
-      name: 'projectDate',
-      title: 'Project Date',
-      type: 'date',
-    }),
-    defineField({
-      name: 'technologies',
-      title: 'Technologies Used',
-      type: 'array',
-      of: [{type: 'string'}],
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
+      name: 'sections',
+      title: 'Sections',
       type: 'array',
       of: [
-        {type: 'block'},
-        {
-          type: 'image',
-          fields: [
-            {
-              type: 'text',
-              name: 'alt',
-              title: 'Alternative text',
-              description: 'Description of the image for accessibility.',
-            },
-          ],
-        },
+        {type: 'portableText'},
+        {type: 'pullQuote'},
+        {type: 'media'},
+        {type: 'workGrid'},
       ],
     }),
+    defineField({ name: 'seo', title: 'SEO', type: 'seo'}),
   ],
 })
